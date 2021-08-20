@@ -1,6 +1,7 @@
 function updateProductNumber(product, price, isIncreasing) {
     const productInput = document.getElementById(product + '-number');
     let productNumber = productInput.value;
+    
     if (isIncreasing == true) {
         productNumber = parseInt(productNumber) + 1;
     }
@@ -22,6 +23,7 @@ function getInputValue(product) {
 }
 
 function calculateTotal() {
+ 
     const phoneTotal = getInputValue('phone') * 1219;
     const caseTotal = getInputValue('case') * 59;
     const subTotal = phoneTotal + caseTotal;
@@ -50,6 +52,3 @@ document.getElementById('case-minus').addEventListener('click', function () {
     updateProductNumber('case', 59, false);
 })
 
-document.getElementById('checkout-button').addEventListener('click',function(){
-    alert("successfully purchased")
-})
